@@ -1,9 +1,10 @@
 import * as helpers from './helpers';
+import path from 'path';
 
-export const LOADERS = [
+export default [
   {
-    test: /\.js$/,
-    include: helpers.root('src'),
+    test: /\.jsx?$/,
+    exclude: /node_modules/,
     loaders: ['babel']
   },
   {
