@@ -1,10 +1,16 @@
 import React, { PropTypes } from 'react';
 
+import HeaderComponent from './common/HeaderComponent';
+
 const App = (props) => {
   return(
-    <div className="container-fluid">
-      <p>Header here...</p>
-      {props.children}
+    <div className="container">
+      <div className="row">
+        <HeaderComponent />
+      </div>
+      <div className="row">
+        {props.children}
+      </div>
     </div>
   );
 };
