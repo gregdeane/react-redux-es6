@@ -1,9 +1,9 @@
-import path from 'path';
+import * as helpers from './helpers';
 
 export const LOADERS = [
   {
     test: /\.js$/,
-    include: path.join(__dirname, 'src'),
+    include: helpers.root('src'),
     loaders: ['babel']
   },
   {
