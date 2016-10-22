@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import * as courseActions from '../../actions/course.actions';
 
@@ -23,7 +24,7 @@ class CourseComponent extends Component {
   }
 
   onClickSave() {
-    this.props.createCourse(this.state.course);
+    this.props.actions.createCourse(this.state.course);
   }
 
   courseRow(course, index) {
@@ -58,8 +59,8 @@ class CourseComponent extends Component {
 }
 
 CourseComponent.propTypes = {
-  createCourse: PropTypes.func.isRequired,
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 // `state.courses` because alias `courses` is used in `combineReducers` (reducers/index.js)
@@ -71,9 +72,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createCourse: (course) => {
-      dispatch(courseActions.createCourse(course));
-    }
+    actions: bindActionCreators(courseActions, dispatch)
   };
 };
 
