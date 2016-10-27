@@ -39,6 +39,14 @@
       "authorId": "cory-house",
       "length": "5:10",
       "category": "HTML5"
+    },
+    {
+      "id": "879ee151-d59b-4fd0-a05d-f084f3f1987b",
+      "title": "Test Course",
+      "watchHref": "",
+      "authorId": "cory-house",
+      "length": "4:24",
+      "category": "stuff"
     }
   ],
   "authors": [

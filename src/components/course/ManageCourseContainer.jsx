@@ -14,35 +14,47 @@ class ManageCourseContainer extends Component {
       course: Object.assign({}, props.course),
       errors: {}
     }
+
+    this.updateCourseState = this.updateCourseState.bind(this);
+    this.saveCourse = this.saveCourse.bind(this);
   }
 
-  onSave() {
+  updateCourseState(event) {
+    const field = event.target.id;
+    let course = this.state.course;
 
+    course[field] = event.target.value;
+
+    return this.setState({ course })
   }
 
-  onChange() {
-
+  saveCourse(event) {
+    event.preventDefault();
+    this.props.actions.saveCourse(this.state.course);
   }
 
   render() {
     return (
-      <CourseForm authors={[]}
+      <CourseForm authors={this.props.authors}
                   course={this.state.course}
                   errors={this.state.errors}
-                  onSave={this.onSave}
-                  onChange={this.onChange} />
+                  onSave={this.saveCourse}
+                  onChange={this.updateCourseState} />
     )
   }
 }
 
 ManageCourseContainer.propTypes = {
-  course: PropTypes.object.isRequired
+  course: PropTypes.object.isRequired,
+  authors: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => {
   let course = { id: '', title: '', watchHref: '', authorId: '', length: '', category: '' };
   return {
-    course: course
+    course: course,
+    authors: state.authors
   };
 };
 

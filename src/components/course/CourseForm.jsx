@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
+import ButtonInput from '../common/ButtonInput';
 
 const CourseForm = ({ course, authors, onSave, onChange, loading, errors }) => {
   return(
@@ -33,12 +34,10 @@ const CourseForm = ({ course, authors, onSave, onChange, loading, errors }) => {
                    onChange={onChange}
                    errors={errors.length} />
 
-        <button type="submit"
-                disabled={loading}
-                className="btn btn-primary"
-                onClick={onSave}>
-          {(loading && 'Saving...') || 'Save'}
-        </button>
+        <ButtonInput type="submit"
+                     disabled={loading}
+                     label={(loading && 'Saving...') || 'Save'}
+                     onClick={onSave} />
       </form>
     </div>
   );

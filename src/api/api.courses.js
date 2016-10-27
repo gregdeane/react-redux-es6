@@ -11,7 +11,7 @@ class CourseApi {
       });
   }
 
-  static addCourse(course) {
+  static createCourse(course) {
     return axios.post(`${url}/courses`, course)
       .then(response => response.data)
       .catch(error => {
