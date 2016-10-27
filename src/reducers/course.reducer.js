@@ -8,14 +8,12 @@ const courseReducer = (state = initialState.courses, action) => {
       return action.courses;
 
     case types.CREATE_COURSE_SUCCESS:
-      console.log('=======SAVE action.course', action.course);
       return [
         ...state,
         Object.assign({}, action.course)
       ];
 
     case types.UPDATE_COURSE_SUCCESS:
-      console.log('=======UPDATE action.course', action.course);
       return [
         ...state.filter(course => course.id !== action.course.id),
         Object.assign({}, action.course)
