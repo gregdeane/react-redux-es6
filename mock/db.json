@@ -39,62 +39,6 @@
       "authorId": "cory-house",
       "length": "5:10",
       "category": "HTML5"
-    },
-    {
-      "id": "879ee151-d59b-4fd0-a05d-f084f3f1987b",
-      "title": "Test Course",
-      "watchHref": "",
-      "authorId": "cory-house",
-      "length": "4:24",
-      "category": "stuff"
-    },
-    {
-      "id": "51c8b858-887c-4937-a636-46d39a8c43a8",
-      "title": "test",
-      "watchHref": "",
-      "authorId": "scott-allen",
-      "length": "set",
-      "category": "tset"
-    },
-    {
-      "id": "8d0325f8-0959-43a7-a961-e60f517438df",
-      "title": "Blah",
-      "watchHref": "",
-      "authorId": "scott-allen",
-      "length": "d",
-      "category": "Blah"
-    },
-    {
-      "id": "5b14b7ee-5a26-445d-b15d-5d56b7826644",
-      "title": "dfsd",
-      "watchHref": "",
-      "authorId": "scott-allen",
-      "length": "",
-      "category": "sdf"
-    },
-    {
-      "id": "bd5487e7-db3f-4d7d-8d6d-83df034363b5",
-      "title": "adsfsdafasd",
-      "watchHref": "",
-      "authorId": "cory-house",
-      "length": "sdf",
-      "category": "asdfdf"
-    },
-    {
-      "id": "3f04163f-eb07-4aab-88cd-5391786ed566",
-      "title": "sdf",
-      "watchHref": "",
-      "authorId": "",
-      "length": "",
-      "category": "sdf"
-    },
-    {
-      "id": "0c6bcb9c-c6cb-4115-a9dc-865e9fd9f02c",
-      "title": "pdf",
-      "watchHref": "",
-      "authorId": "dan-wahlin",
-      "length": "",
-      "category": ""
     }
   ],
   "authors": [

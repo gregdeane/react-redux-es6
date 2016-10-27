@@ -20,6 +20,12 @@ class ManageCourseContainer extends Component {
     this.saveCourse = this.saveCourse.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.course.id !== nextProps.course.id) {
+      this.setState({ course: Object.assign({}, nextProps.course) });
+    }
+  }
+
   updateCourseState(event) {
     const field = event.target.id;
     let course = this.state.course;
@@ -52,8 +58,18 @@ ManageCourseContainer.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state) => {
-  let course = { id: '', title: '', watchHref: '', authorId: '', length: '', category: '' };
+// either get course based on `:id` in url or use initial
+const getCourse = (courses, id) => {
+  let initial = { id: '', title: '', watchHref: '', authorId: '', length: '', category: '' };
+  let course = courses.filter(course => {
+    return course.id === id;
+  });
+
+  return (course.length && course[0]) || initial;
+};
+
+const mapStateToProps = (state, ownProps) => {
+  let course = getCourse(state.courses, ownProps.params.id);  // ownProps.params.id from `/course/:id`
   return {
     course: course,
     authors: state.authors
