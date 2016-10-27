@@ -1,10 +1,6 @@
 import * as types from '../constants/action.types';
 import courseApi from '../api/api.courses';
 
-export const createCourse = (course) => {
-  return { type: types.CREATE_COURSE, course };
-};
-
 export const loadCoursesSuccess = (courses) => {
   return { type: types.LOAD_COURSES_SUCCESS, courses };
 };
@@ -13,7 +9,9 @@ export const loadCourses = () => {
   return (dispatch) => {
     courseApi.getCourses()
       .then(courses => dispatch(loadCoursesSuccess(courses)))
-      .catch(error => console.log(error));
+      .catch(error => {
+        throw error;
+      });
   };
 };
 

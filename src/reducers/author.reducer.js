@@ -2,14 +2,14 @@ import * as types from '../constants/action.types';
 
 import initialState from './state.initial';
 
-const courseReducer = (state = initialState.courses, action) => {
+const authorReducer = (state = initialState.authors, action) => {
   switch(action.type) {
-    case types.LOAD_COURSES_SUCCESS:
-      return action.courses;
+    case types.LOAD_AUTHORS_SUCCESS:
+      return action.authors;
 
     default:
       return state;
   }
 };
 
-export default courseReducer;
+export default authorReducer;
