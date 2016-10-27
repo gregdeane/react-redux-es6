@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import * as courseActions from '../../actions/course.actions';
-import CourseListComponent from './CourseListComponent';
+import CourseList from './CourseList';
 
-class CourseComponentContainer extends Component {
+class CourseContainer extends Component {
 
   constructor(props, context) {
     super(props, context);
@@ -15,13 +15,13 @@ class CourseComponentContainer extends Component {
     return (
       <div className="col-xs-12">
         <h1>Courses</h1>
-        <CourseListComponent courses={this.props.courses} />
+        <CourseList courses={this.props.courses} />
       </div>
     );
   }
 }
 
-CourseComponentContainer.propTypes = {
+CourseContainer.propTypes = {
   courses: PropTypes.array.isRequired
 };
 
@@ -41,4 +41,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CourseComponentContainer);
+)(CourseContainer);
