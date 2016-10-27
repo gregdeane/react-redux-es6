@@ -5,14 +5,13 @@ import { Provider } from 'react-redux';
 
 import configureStore from './store/configure.store';
 import routes from './routes';
-import courseApi from './api/api.courses';
+import { loadCourses } from './actions/course.actions';
 
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
-
-courseApi.getCourses().then(res => console.log(res));
+store.dispatch(loadCourses());
 
 render(
   <Provider store={store}>
