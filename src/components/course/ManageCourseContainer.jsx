@@ -77,7 +77,7 @@ const getCourse = (courses, id) => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  let course = getCourse(state.courses, ownProps.params.id);  // ownProps.params.id from `/course/:id`
+  let course = getCourse(state.courses, +ownProps.params.id);  // ownProps.params.id from `/course/:id`
   return {
     course: course,
     authors: state.authors
