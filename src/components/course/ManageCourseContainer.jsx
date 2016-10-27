@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -13,7 +14,7 @@ class ManageCourseContainer extends Component {
     this.state = {
       course: Object.assign({}, props.course),
       errors: {}
-    }
+    };
 
     this.updateCourseState = this.updateCourseState.bind(this);
     this.saveCourse = this.saveCourse.bind(this);
@@ -31,6 +32,7 @@ class ManageCourseContainer extends Component {
   saveCourse(event) {
     event.preventDefault();
     this.props.actions.saveCourse(this.state.course);
+    browserHistory.push('/courses');
   }
 
   render() {
