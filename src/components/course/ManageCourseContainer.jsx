@@ -36,9 +36,17 @@ class ManageCourseContainer extends Component {
   }
 
   saveCourse(event) {
-    event.preventDefault();
-    this.props.actions.saveCourse(this.state.course);
+    const courseId = this.props.course.id;
+    let actions = this.props.actions;
+
+    if (courseId) {
+      actions.updateCourse(this.state.course);
+    } else {
+      actions.saveCourse(this.state.course);
+    }
+
     browserHistory.push('/courses');
+    event.preventDefault();
   }
 
   render() {
