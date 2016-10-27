@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import * as courseActions from '../../actions/course.actions';
 import CourseList from './CourseList';
 
 class CourseContainer extends Component {
@@ -32,13 +30,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    actions: bindActionCreators(courseActions, dispatch)
-  };
-};
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(CourseContainer);

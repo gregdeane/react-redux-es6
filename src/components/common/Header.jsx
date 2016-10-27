@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-const HeaderComponent = () => {
+const Header = () => {
   return (
     <nav className="navbar navbar-light bg-faded">
       <ul className="nav navbar-nav">
@@ -19,4 +19,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default Header;

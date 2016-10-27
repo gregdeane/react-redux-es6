@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 
-import HeaderComponent from './common/HeaderComponent';
+import Header from './common/Header';
 
 const App = (props) => {
   return(
     <div className="container">
       <div className="row">
-        <HeaderComponent />
+        <Header />
       </div>
       <div className="row">
         {props.children}
