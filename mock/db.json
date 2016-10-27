@@ -20,8 +20,8 @@
       "id": "architecture",
       "title": "Architecting Applications for the Real World",
       "watchHref": "http://www.pluralsight.com/courses/architecting-applications-dotnet",
-      "authorId": "cory-house",
-      "length": "2:52",
+      "authorId": "dan-wahlin",
+      "length": "0:00",
       "category": "Software Architecture"
     },
     {
@@ -39,6 +39,46 @@
       "authorId": "cory-house",
       "length": "5:10",
       "category": "HTML5"
+    },
+    {
+      "id": "382f390c-dc7f-4960-b031-4be82842e231",
+      "title": "test",
+      "watchHref": "",
+      "authorId": "cory-house",
+      "length": "",
+      "category": ""
+    },
+    {
+      "id": "5334b239-69b0-46c2-ac50-45e39441f1f0",
+      "title": "TEst 1..2..3",
+      "watchHref": "",
+      "authorId": "cory-house",
+      "length": "sdf",
+      "category": "sdf"
+    },
+    {
+      "id": "ca2efb76-df71-4d6e-a56c-53162f53a657",
+      "title": "Test Safari Update",
+      "watchHref": "",
+      "authorId": "cory-house",
+      "length": "0:44",
+      "category": "Other"
+    },
+    {
+      "id": "01e044b0-0c79-4f6d-929c-a6bdcefb751b",
+      "title": "Safari Add update via FF",
+      "watchHref": "",
+      "authorId": "cory-house",
+      "length": "2:55",
+      "category": "Other"
+    },
+    {
+      "id": "4d47f79c-8020-4338-afc4-87152360d832",
+      "title": "Firefox Add",
+      "watchHref": "",
+      "authorId": "dan-wahlin",
+      "length": "",
+      "category": "Other"
     }
   ],
   "authors": [
